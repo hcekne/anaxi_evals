@@ -86,4 +86,6 @@ git diff --check
 git diff
 ```
 
-Update the catalog version and changelog as [CONTRIBUTING.md](CONTRIBUTING.md) requires. Keep stable scenario IDs and request order unless you deliberately introduce a new incompatible version. Repository CI runs the same consistency checks and tooling tests. It does not run paid agents or qualify application behavior.
+Update the catalog version and changelog as [CONTRIBUTING.md](CONTRIBUTING.md) requires. Keep stable scenario IDs and request order unless you deliberately introduce a new incompatible version.
+
+The [GitHub Actions template](templates/github-actions-validate.yml) runs the same consistency checks and tooling tests. To activate it, an account with workflow-write permission can copy it to `.github/workflows/validate.yml`. It is **not active**: the connected GitHub app used for the initial import cannot create workflows. Local checks work without that permission. These checks do not run paid agents or qualify application behavior.

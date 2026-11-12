@@ -13,6 +13,9 @@ Every experimental report must pin an exact commit in addition to this version.
   retrieve individual prompts, export operator bundles, and validate consistency.
 - Added navigation, agent maintenance instructions, contribution/versioning rules,
   experiment and improvement templates, and evidence-handling guidance.
+- Added 12 tooling tests and a GitHub Actions validation template. The connected
+  app lacks workflow-write permission, so automated CI is not activated; the
+  same commands pass locally.
 
 Status: specification and repository-tooling release. Fixture services, independent
 evaluator tests, runner bindings, and qualified large-repository cases are not yet
