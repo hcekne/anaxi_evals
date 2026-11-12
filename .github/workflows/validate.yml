@@ -1,0 +1,21 @@
+name: Validate eval package
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate catalog and generated prompts
+        run: python3 tools/evals.py validate
+      - name: Test retrieval and validation tooling
+        run: python3 -m unittest discover -s tests -v

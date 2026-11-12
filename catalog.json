@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "suite_version": "0.1.0",
+  "status": "specification-with-retrieval-tools",
+  "split": "development",
+  "protocol": "docs/protocol.md",
+  "charter": "shared/charter.md",
+  "requests": "requests.jsonl",
+  "readiness": {
+    "specifications": "authored",
+    "prompt_tools": "implemented",
+    "public_fixtures": "not_implemented",
+    "acceptance_oracles": "not_implemented",
+    "agent_runner": "not_implemented",
+    "ci_release_instrumentation": "not_implemented",
+    "stress_seeds": "not_implemented",
+    "large_repository_mappings": "not_implemented",
+    "campaign": "not_run"
+  },
+  "scenarios": [
+    {
+      "id": "relaydesk",
+      "title": "RelayDesk",
+      "focus": "Reusable integrations, provider differences, extension and removal cost",
+      "spec": "evals/relaydesk/spec.md",
+      "requests": "evals/relaydesk/requests.jsonl",
+      "step_count": 16,
+      "continuation_probe_count": 4,
+      "status": "specification",
+      "tracks": [
+        "G",
+        "S",
+        "R"
+      ]
+    },
+    {
+      "id": "dispatchledger",
+      "title": "DispatchLedger",
+      "focus": "Safe selective CI, independent builds and releases, contract compatibility",
+      "spec": "evals/dispatchledger/spec.md",
+      "requests": "evals/dispatchledger/requests.jsonl",
+      "step_count": 16,
+      "continuation_probe_count": 4,
+      "status": "specification",
+      "tracks": [
+        "G",
+        "S",
+        "R"
+      ]
+    },
+    {
+      "id": "caseflow",
+      "title": "CaseFlow",
+      "focus": "Durable workflows, permissions, connector evolution and fresh-maintainer changes",
+      "spec": "evals/caseflow/spec.md",
+      "requests": "evals/caseflow/requests.jsonl",
+      "step_count": 16,
+      "continuation_probe_count": 4,
+      "status": "specification",
+      "tracks": [
+        "G",
+        "S",
+        "R"
+      ]
+    }
+  ]
+}
