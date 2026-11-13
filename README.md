@@ -2,7 +2,7 @@
 
 Three evolving-product evaluations for testing whether AnaxiGraph helps coding agents produce software that is easier to extend, maintain, verify and release. Each scenario has **one initial request and 15 consecutive follow-ups**, plus four maintenance-probe families.
 
-**Current version: 0.2.0 — executable Python tracks.** All 48 prompts, evaluator criteria and the shared experiment protocol are included, and each scenario now ships an executable track (`evals/<id>/track/`: seed repository, local fixtures, hidden step tests and probe tests) that runs through the anaxigraph-v2 feature-drift runner with `ANAXI_EVALS_ROOT` pointing here. The large-repository (R) track and browser checks are not implemented. A passing repository check is not an AnaxiGraph result.
+**Current version: 0.2.1 — executable Python tracks.** All 48 prompts, evaluator criteria and the shared experiment protocol are included, and each scenario now ships an executable track (`evals/<id>/track/`: seed repository, local fixtures, hidden step tests and probe tests) that runs through the anaxigraph-v2 feature-drift runner with `ANAXI_EVALS_ROOT` pointing here. The large-repository (R) track and browser checks are not implemented. A passing repository check is not an AnaxiGraph result.
 
 ## Choose an eval
 

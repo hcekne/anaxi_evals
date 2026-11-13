@@ -3,6 +3,17 @@
 Record changes to tasks and measurement separately from tooling and documentation.
 Every experimental report must pin an exact commit in addition to this version.
 
+## 0.2.1 — 2026-11-13
+
+- DispatchLedger oracle fix: the hidden harness waited for `200` from `/api/health`, but
+  request 10 makes every unlisted `/api` endpoint staff-only and does not list health, so an
+  agent following it literally answers `401` and every hidden test failed to start the app.
+  Any non-5xx health reply now counts as started. No test asserts on health itself.
+- Comparison effect: outcomes change for any DispatchLedger candidate that protects health
+  (0/106 → 106/106 for one pilot candidate at request 11). Prompts are unchanged. Known
+  prompt gap kept for comparability: request 10 should list `/api/health` as public, as
+  RelayDesk request 4 and CaseFlow request 6 do.
+
 ## 0.2.0 — 2026-11-13
 
 - Added executable G-track packages for RelayDesk, DispatchLedger and CaseFlow under

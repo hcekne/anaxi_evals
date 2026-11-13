@@ -175,7 +175,10 @@ class App:
             if self.proc.poll() is not None:
                 break
             try:
-                if self.http.get("/api/health").status_code == 200:
+                # Request 10 makes every unlisted /api endpoint staff-only and does not
+                # list /api/health, so a literal reading answers 401. Any non-5xx reply
+                # means the web app is up; no DispatchLedger test asserts on health.
+                if self.http.get("/api/health").status_code < 500:
                     return
             except httpx.HTTPError:
                 pass

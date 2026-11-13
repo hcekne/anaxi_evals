@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "suite_version": "0.2.0",
+  "suite_version": "0.2.1",
   "status": "executable-python-stratum",
   "split": "development",
   "protocol": "docs/protocol.md",
