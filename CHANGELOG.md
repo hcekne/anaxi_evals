@@ -3,6 +3,21 @@
 Record changes to tasks and measurement separately from tooling and documentation.
 Every experimental report must pin an exact commit in addition to this version.
 
+## 0.2.0 — 2026-11-13
+
+- Added executable G-track packages for RelayDesk, DispatchLedger and CaseFlow under
+  `evals/<id>/track/`: a public seed repository, per-step request files, an
+  in-process fixture hub, hidden cumulative black-box tests for all 16 steps
+  (123, 137 and 102 tests), and four continuation probes each with their own tests.
+- Fixtures are deterministic local Python stand-ins for the spec's services. This is
+  the Python-only stratum the protocol permits; browser/UI checks are not included.
+- Qualification: an independent reference implementation per scenario passes every
+  hidden test at every step when replayed through the anaxigraph-v2 feature-drift
+  runner (`--agent ref:<repo>`, 2026-11-13). Probe tests fail against unmodified
+  step-15 code, as intended.
+- Interpretation: measures behavior and maintainability under the runner's rules;
+  it is not the large-repository (R) track. No treatment result is reported here.
+
 ## 0.1.0 — 2026-11-12
 
 - Imported the authored RelayDesk, DispatchLedger, and CaseFlow specifications:

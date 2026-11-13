@@ -1,0 +1,1 @@
+{"select": [".venv/bin/python", "-c", "import sys; paths = [p.strip() for p in sys.stdin if p.strip()]; docs = all(p.endswith('.md') or p.startswith('docs/') for p in paths); print('' if paths and docs else 'ALL')"]}

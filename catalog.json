@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "suite_version": "0.1.0",
-  "status": "specification-with-retrieval-tools",
+  "suite_version": "0.2.0",
+  "status": "executable-python-stratum",
   "split": "development",
   "protocol": "docs/protocol.md",
   "charter": "shared/charter.md",
@@ -9,13 +9,13 @@
   "readiness": {
     "specifications": "authored",
     "prompt_tools": "implemented",
-    "public_fixtures": "not_implemented",
-    "acceptance_oracles": "not_implemented",
-    "agent_runner": "not_implemented",
+    "public_fixtures": "implemented: in-process Python fixtures under evals/<id>/track/hub.py (Python-only stratum)",
+    "acceptance_oracles": "implemented: hidden black-box tests under evals/<id>/track/hidden, qualified by reference replay",
+    "agent_runner": "external: anaxigraph-v2 experiments/feature_drift/runner.py (ANAXI_EVALS_ROOT)",
     "ci_release_instrumentation": "not_implemented",
     "stress_seeds": "not_implemented",
     "large_repository_mappings": "not_implemented",
-    "campaign": "not_run"
+    "campaign": "development pilot in progress"
   },
   "scenarios": [
     {
@@ -26,12 +26,13 @@
       "requests": "evals/relaydesk/requests.jsonl",
       "step_count": 16,
       "continuation_probe_count": 4,
-      "status": "specification",
+      "status": "executable-g-track",
       "tracks": [
         "G",
         "S",
         "R"
-      ]
+      ],
+      "track": "evals/relaydesk/track"
     },
     {
       "id": "dispatchledger",
@@ -41,12 +42,13 @@
       "requests": "evals/dispatchledger/requests.jsonl",
       "step_count": 16,
       "continuation_probe_count": 4,
-      "status": "specification",
+      "status": "executable-g-track",
       "tracks": [
         "G",
         "S",
         "R"
-      ]
+      ],
+      "track": "evals/dispatchledger/track"
     },
     {
       "id": "caseflow",
@@ -56,12 +58,13 @@
       "requests": "evals/caseflow/requests.jsonl",
       "step_count": 16,
       "continuation_probe_count": 4,
-      "status": "specification",
+      "status": "executable-g-track",
       "tracks": [
         "G",
         "S",
         "R"
-      ]
+      ],
+      "track": "evals/caseflow/track"
     }
   ]
 }

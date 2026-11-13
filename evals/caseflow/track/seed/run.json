@@ -1,0 +1,3 @@
+{
+  "command": [".venv/bin/python", "-m", "caseflow", "serve", "--host", "127.0.0.1", "--port", "{port}"]
+}

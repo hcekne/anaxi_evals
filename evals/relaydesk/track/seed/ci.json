@@ -1,0 +1,1 @@
+{"select": [".venv/bin/python", "-c", "print('ALL')"]}
